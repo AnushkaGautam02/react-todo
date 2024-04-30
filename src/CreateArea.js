@@ -27,21 +27,26 @@ const CreateArea =(props)=>{
     }
     return(
         <>
-            <form>
-                <input
+            <form className="my-5 border border-1 p-4 rounded w-25 m-auto">
+                <div className="py-4"><input
                     name= "title"
                     onChange={handleChange}
                     value={note.title}
                     placeholder="title"
+                    className="w-100 p-2 rounded border border-secondary-subtle"
                 />
+                </div>
+                <div className="py-4">
                 <input
+                className="w-100 p-2 rounded border border-secondary-subtle"
                     name="content"
                     onChange={handleChange}
                     value={note.content}
                     placeholder="description..."
                     row ="3"
                 />
-                <button onClick={submitNote}>Add</button>
+                </div>
+                <button onClick={submitNote} className="btn bg-warning text-light">Add</button>
             </form>
         </>
     )

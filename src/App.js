@@ -32,11 +32,13 @@ function App() {
     <div className="App">
       
         <Header/>
+        <div className='container mb-5 keeper-body'>
         <CreateArea onAdd= {addNote}/>
         <div className='keeper-section'>
         {notes.map((noteItem, index) =>{
           return <Notes key={index} id={index} title={noteItem.title} content={noteItem.content} onDelete= {deleteNote}/>
         })}
+        </div>
         </div>
         <Footer/>
       
